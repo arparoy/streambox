@@ -72,7 +72,7 @@ export default function MovieCard({ movie, viewMode = 'grid' }: { movie: Movie, 
             ))}
           </div>
 
-          <p className="text-sm text-foreground/70 line-clamp-2 mt-auto hidden sm:block">
+          <p className="text-sm text-foreground/70 mt-auto hidden sm:line-clamp-3">
             {movie.description}
           </p>
           

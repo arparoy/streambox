@@ -1,0 +1,141 @@
+[
+  {
+    "id": "avatar",
+    "title": "Avatar",
+    "year": 2009,
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "language": "English",
+    "quality": "1080p BluRay",
+    "duration": "2h 42m",
+    "size": "2.8 GB",
+    "rating": "7.8",
+    "cover": "https://picsum.photos/seed/avatar/800/1200",
+    "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
+    "director": "James Cameron",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+    "downloads": [
+      { "quality": "480p", "url": "#" },
+      { "quality": "720p", "url": "#" },
+      { "quality": "1080p", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  },
+  {
+    "id": "john-wick-4",
+    "title": "John Wick: Chapter 4",
+    "year": 2023,
+    "genre": ["Action", "Crime", "Thriller"],
+    "language": "English",
+    "quality": "4K UHD",
+    "duration": "2h 49m",
+    "size": "5.2 GB",
+    "rating": "7.7",
+    "cover": "https://picsum.photos/seed/johnwick/800/1200",
+    "description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+    "cast": ["Keanu Reeves", "Laurence Fishburne", "George Georgiou"],
+    "director": "Chad Stahelski",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=qEVUtrk8_B4",
+    "downloads": [
+      { "quality": "1080p", "url": "#" },
+      { "quality": "4K", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  },
+  {
+    "id": "dune-part-two",
+    "title": "Dune: Part Two",
+    "year": 2024,
+    "genre": ["Action", "Adventure", "Drama", "Sci-Fi"],
+    "language": "English",
+    "quality": "1080p Web-DL",
+    "duration": "2h 46m",
+    "size": "3.1 GB",
+    "rating": "8.6",
+    "cover": "https://picsum.photos/seed/dune/800/1200",
+    "description": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
+    "cast": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
+    "director": "Denis Villeneuve",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=Way9Dexny3w",
+    "downloads": [
+      { "quality": "720p", "url": "#" },
+      { "quality": "1080p", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  },
+  {
+    "id": "oppenheimer",
+    "title": "Oppenheimer",
+    "year": 2023,
+    "genre": ["Biography", "Drama", "History"],
+    "language": "English",
+    "quality": "4K UHD",
+    "duration": "3h 0m",
+    "size": "4.5 GB",
+    "rating": "8.4",
+    "cover": "https://picsum.photos/seed/oppenheimer/800/1200",
+    "description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
+    "cast": ["Cillian Murphy", "Emily Blunt", "Matt Damon"],
+    "director": "Christopher Nolan",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=uYPbbksJxIg",
+    "downloads": [
+      { "quality": "1080p", "url": "#" },
+      { "quality": "4K", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  },
+  {
+    "id": "spiderman-across-the-spiderverse",
+    "title": "Spider-Man: Across the Spider-Verse",
+    "year": 2023,
+    "genre": ["Animation", "Action", "Adventure"],
+    "language": "English",
+    "quality": "1080p Web-DL",
+    "duration": "2h 20m",
+    "size": "2.2 GB",
+    "rating": "8.6",
+    "cover": "https://picsum.photos/seed/spiderman/800/1200",
+    "description": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.",
+    "cast": ["Shameik Moore", "Hailee Steinfeld", "Brian Tyree Henry"],
+    "director": "Joaquim Dos Santos",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=shW9i6k8cB0",
+    "downloads": [
+      { "quality": "720p", "url": "#" },
+      { "quality": "1080p", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  },
+  {
+    "id": "the-dark-knight",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": ["Action", "Crime", "Drama"],
+    "language": "English",
+    "quality": "1080p BluRay",
+    "duration": "2h 32m",
+    "size": "2.9 GB",
+    "rating": "9.0",
+    "cover": "https://picsum.photos/seed/darkknight/800/1200",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "director": "Christopher Nolan",
+    "youtubeTrailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+    "downloads": [
+      { "quality": "720p", "url": "#" },
+      { "quality": "1080p", "url": "#" }
+    ],
+    "backupLinks": [
+      { "name": "Backup Server", "url": "#" }
+    ]
+  }
+]

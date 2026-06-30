@@ -1,0 +1,6 @@
+{
+  "name": "StreamBox",
+  "description": "A complete movie catalog website with static JSON data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

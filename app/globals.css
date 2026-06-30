@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e50914;
+  --color-primary-hover: #f40612;
+  --color-dark: #0f0f0f;
+  --color-dark-card: #181818;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  min-height: 100vh;
+}
+
+.glassmorphism {
+  background: rgba(24, 24, 24, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}

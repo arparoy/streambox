@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Star, Clock, Calendar, Disc, Globe, HardDrive, Download, Database } from 'lucide-react';
 import RelatedMovies from '@/components/related-movies';
 import MovieActions from '@/components/movie-actions';
+import DownloadSection from '@/components/download-section';
 import { Metadata } from 'next';
 
 // Generate static paths for all movies
@@ -16,13 +17,39 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const movie = getMovieById(id);
-  if (!movie) return { title: 'Not Found' };
+  
+  if (!movie) {
+    return {
+      title: 'Movie Not Found - StreamBox',
+      description: 'The requested movie could not be found.',
+    };
+  }
+
   return {
-    title: `Download ${movie.title} (${movie.year}) - StreamBox`,
+    title: `${movie.title} (${movie.year}) | Download Free on StreamBox`,
     description: movie.description,
     openGraph: {
+      title: `${movie.title} (${movie.year}) - StreamBox`,
+      description: movie.description,
+      url: `/movie/${movie.id}`,
+      siteName: 'StreamBox',
+      images: [
+        {
+          url: movie.cover,
+          width: 800,
+          height: 1200,
+          alt: `${movie.title} Poster`,
+        },
+      ],
+      locale: 'en_US',
+      type: 'video.movie',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${movie.title} (${movie.year}) | Download Free`,
+      description: movie.description,
       images: [movie.cover],
-    }
+    },
   };
 }
 
@@ -86,7 +113,7 @@ export default async function MoviePage({ params }: { params: Promise<{ id: stri
             ))}
           </div>
 
-          <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl">
+          <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl whitespace-pre-wrap">
             {movie.description}
           </p>
 
@@ -121,45 +148,7 @@ export default async function MoviePage({ params }: { params: Promise<{ id: stri
       <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
         
         {/* Downloads */}
-        <div className="lg:col-span-1 space-y-8">
-          <div className="glassmorphism p-6 rounded-2xl border border-border-subtle">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-foreground">
-              <Download className="w-5 h-5 text-primary" /> Download Links
-            </h3>
-            
-            <div className="space-y-3">
-              {movie.downloads.map((d, i) => (
-                <a 
-                  key={i} 
-                  href={d.url}
-                  className="flex items-center justify-between p-3 rounded-lg bg-card border border-border-subtle hover:bg-primary/10 hover:border-primary/50 transition-all group"
-                >
-                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Download {d.quality}</span>
-                  <Download className="w-4 h-4 text-foreground/50 group-hover:text-primary" />
-                </a>
-              ))}
-            </div>
-
-            {movie.backupLinks && movie.backupLinks.length > 0 && (
-              <div className="mt-8">
-                <h4 className="text-sm font-semibold text-foreground/50 uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <Database className="w-4 h-4" /> Backup Servers
-                </h4>
-                <div className="space-y-2">
-                  {movie.backupLinks.map((b, i) => (
-                    <a 
-                      key={i}
-                      href={b.url}
-                      className="block p-2 text-sm rounded-md bg-card border border-border-subtle hover:bg-background text-foreground/80 transition-colors"
-                    >
-                      {b.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+        <DownloadSection movie={movie} />
 
         {/* Trailer */}
         <div className="lg:col-span-2">

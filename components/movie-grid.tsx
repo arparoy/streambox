@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useSearchParams } from 'next/navigation';
 import { Filter, ChevronLeft, ChevronRight, LayoutGrid, List as ListIcon, X, SlidersHorizontal, Check } from 'lucide-react';
 import { useLocalStorage } from '@/hooks/use-local-storage';
+import Image from 'next/image';
 
 export default function MovieGrid({ initialMovies, categories }: { initialMovies: Movie[], categories: string[] }) {
   const searchParams = useSearchParams();
@@ -267,13 +268,23 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
             ))}
           </motion.div>
         ) : (
-          <div className="text-center py-20 bg-card border border-border-subtle rounded-xl">
-            <p className="text-xl text-foreground/60 mb-4">No movies found matching your criteria.</p>
+          <div className="flex flex-col items-center justify-center py-20 bg-card border border-border-subtle rounded-xl text-center px-4">
+            <div className="relative w-48 h-48 mb-6 opacity-80">
+              <Image 
+                src="/no_results.jpg"
+                alt="No movies found"
+                fill
+                className="object-contain rounded-lg"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <p className="text-xl text-foreground/80 mb-2 font-semibold">No movies found</p>
+            <p className="text-foreground/60 mb-6 max-w-md">We couldn't find any movies matching your current criteria. Try adjusting your filters or search term.</p>
             <button 
               onClick={clearFilters}
-              className="text-primary hover:underline font-medium"
+              className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
             >
-              Clear filters
+              Clear all filters
             </button>
           </div>
         )}

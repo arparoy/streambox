@@ -8,9 +8,13 @@ import { motion, AnimatePresence } from 'motion/react';
 
 import ThemeToggle from './theme-toggle';
 
+import { movies } from '@/lib/movies';
+import Image from 'next/image';
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
   const router = useRouter();
 
   // Handle keyboard shortcut for search
@@ -30,8 +34,13 @@ export default function Header() {
     if (searchQuery.trim()) {
       router.push(`/?search=${encodeURIComponent(searchQuery)}`);
       setIsMenuOpen(false);
+      setIsSearchFocused(false);
     }
   };
+
+  const searchResults = searchQuery.trim().length > 0 
+    ? movies.filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 5)
+    : [];
 
   return (
     <header className="sticky top-0 z-50 glassmorphism border-b border-border-subtle">
@@ -51,17 +60,81 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <form onSubmit={handleSearch} className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-foreground/50" />
-              <input
-                id="global-search"
-                type="text"
-                placeholder="Search movies... (Press '/')"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-card border border-border-subtle rounded-full py-1.5 pl-9 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-64 transition-all placeholder:text-foreground/50"
-              />
-            </form>
+            <div className="relative">
+              <form onSubmit={handleSearch} className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-foreground/50" />
+                <input
+                  id="global-search"
+                  type="text"
+                  placeholder="Search movies... (Press '/')"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+                  className="bg-card border border-border-subtle rounded-full py-1.5 pl-9 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-64 transition-all placeholder:text-foreground/50"
+                />
+              </form>
+              
+              <AnimatePresence>
+                {isSearchFocused && searchQuery.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 right-0 mt-2 bg-card border border-border-subtle rounded-xl shadow-xl overflow-hidden z-50 max-h-96 overflow-y-auto custom-scrollbar"
+                  >
+                    {searchResults.length > 0 ? (
+                      <div className="flex flex-col">
+                        {searchResults.map(movie => (
+                          <Link 
+                            key={movie.id} 
+                            href={`/movie/${movie.id}`}
+                            className="flex items-center gap-3 p-3 hover:bg-background transition-colors border-b border-border-subtle last:border-0"
+                            onClick={() => {
+                              setSearchQuery('');
+                              setIsSearchFocused(false);
+                            }}
+                          >
+                            <div className="relative w-10 h-14 shrink-0 rounded overflow-hidden">
+                              <Image 
+                                src={movie.cover} 
+                                alt={movie.title} 
+                                fill 
+                                referrerPolicy="no-referrer"
+                                className="object-cover" 
+                              />
+                            </div>
+                            <div className="flex flex-col overflow-hidden">
+                              <span className="font-medium text-sm truncate text-foreground">{movie.title}</span>
+                              <span className="text-xs text-foreground/60">{movie.year} • {movie.quality}</span>
+                            </div>
+                          </Link>
+                        ))}
+                        <button 
+                          onClick={handleSearch}
+                          className="p-3 text-sm text-center text-primary font-medium hover:bg-background transition-colors"
+                        >
+                          View all results
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-center justify-center p-6 text-center text-foreground/60">
+                        <div className="relative w-24 h-24 mb-3 opacity-80">
+                          <Image 
+                            src="/no_results.jpg"
+                            alt="No results"
+                            fill
+                            className="object-contain rounded"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                        <span className="text-sm font-medium">No results found</span>
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <ThemeToggle />
           </div>
 
@@ -93,8 +166,71 @@ export default function Header() {
                   placeholder="Search movies..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
                   className="bg-card border border-border-subtle rounded-lg py-2 pl-9 pr-4 text-sm w-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder:text-foreground/50"
                 />
+                
+                <AnimatePresence>
+                  {isSearchFocused && searchQuery.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute top-full left-0 right-0 mt-2 bg-card border border-border-subtle rounded-xl shadow-xl overflow-hidden z-50 max-h-64 overflow-y-auto custom-scrollbar"
+                    >
+                      {searchResults.length > 0 ? (
+                        <div className="flex flex-col">
+                          {searchResults.map(movie => (
+                            <Link 
+                              key={movie.id} 
+                              href={`/movie/${movie.id}`}
+                              className="flex items-center gap-3 p-3 hover:bg-background transition-colors border-b border-border-subtle last:border-0"
+                              onClick={() => {
+                                setSearchQuery('');
+                                setIsSearchFocused(false);
+                                setIsMenuOpen(false);
+                              }}
+                            >
+                              <div className="relative w-10 h-14 shrink-0 rounded overflow-hidden">
+                                <Image 
+                                  src={movie.cover} 
+                                  alt={movie.title} 
+                                  fill 
+                                  referrerPolicy="no-referrer"
+                                  className="object-cover" 
+                                />
+                              </div>
+                              <div className="flex flex-col overflow-hidden">
+                                <span className="font-medium text-sm truncate text-foreground">{movie.title}</span>
+                                <span className="text-xs text-foreground/60">{movie.year} • {movie.quality}</span>
+                              </div>
+                            </Link>
+                          ))}
+                          <button 
+                            onClick={handleSearch}
+                            className="p-3 text-sm text-center text-primary font-medium hover:bg-background transition-colors"
+                          >
+                            View all results
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col items-center justify-center p-6 text-center text-foreground/60">
+                          <div className="relative w-24 h-24 mb-3 opacity-80">
+                            <Image 
+                              src="/no_results.jpg"
+                              alt="No results"
+                              fill
+                              className="object-contain rounded"
+                              referrerPolicy="no-referrer"
+                            />
+                          </div>
+                          <span className="text-sm font-medium">No results found</span>
+                        </div>
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </form>
               <nav className="flex flex-col gap-2">
                 <Link href="/" className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-background rounded-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>

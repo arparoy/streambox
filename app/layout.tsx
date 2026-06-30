@@ -9,8 +9,23 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'StreamBox - Free Movie Downloads',
-  description: 'Download the latest movies in high quality.',
+  title: {
+    default: 'StreamBox - Free Movie Downloads',
+    template: '%s | StreamBox'
+  },
+  description: 'Download the latest movies in high quality, including trending web series, exclusive collections, and more.',
+  openGraph: {
+    title: 'StreamBox - Free Movie Downloads',
+    description: 'Download the latest movies in high quality, including trending web series, exclusive collections, and more.',
+    siteName: 'StreamBox',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StreamBox - Free Movie Downloads',
+    description: 'Download the latest movies in high quality, including trending web series, exclusive collections, and more.',
+  }
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

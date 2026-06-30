@@ -686,6 +686,38 @@
   "backupLinks": []
 },
   {
+  "id": "wajah-tum-ho",
+  "title": "Wajah Tum Ho",
+  "year": 2016,
+  "genre": [
+    "Drama",
+    "Mystery",
+    "Romance"
+  ],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "2h 16m",
+  "size": "3.8 GB",
+  "rating": "4.4",
+  "trending": true,
+  "cover": "https://raw.githubusercontent.com/taniyachatterjeegit/wajah-tum-ho/refs/heads/main/3.jpg",
+  "description": "A mystery thriller revolving around a television channel that becomes the center of a series of live-streamed murders. As the investigation unfolds, hidden secrets, betrayals, and shocking connections come to light, leading to an intense battle to uncover the mastermind.",
+  "cast": [
+    "Sharman Joshi",
+    "Sana Khaan",
+    "Gurmeet Choudhary"
+  ],
+  "director": "Vishal Pandya",
+  "youtubeTrailer": "https://youtu.be/sBueTW-W7Qc",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "url": "https://drive.google.com/drive/folders/1UaFdx6S3QfUGeDTOpG-ktg8wsrwBHdOr"
+    }
+  ],
+  "backupLinks": []
+  },
+  {
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,

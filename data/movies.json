@@ -52,6 +52,41 @@
     ]
   },
   {
+  "id": "tu-dekh-meri-photo-s1",
+  "title": "Tu Dekh Meri Photo",
+  "year": 2025,
+  "genre": ["Drama", "Romance"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "/movies/tu-dekh-meri-photo-s1-cover.jpg",
+  "description": "Nandini's marriage is arranged without seeing the groom. As secrets, lies, and betrayal unfold, she becomes trapped in a web of deception before her wedding. Will she uncover the truth before it's too late?",
+  "cast": [
+    "Puja Rao",
+    "Pihu Singh",
+    "Anita Jaiswal",
+    "Abhinay Singh",
+    "Ravi Mishra",
+    "Manish Mishra"
+  ],
+  "director": "N/A",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p",
+      "url": "https://drive.google.com/drive/folders/1KhbfaOb5yOeyljmXK1PzkiD-opKCAx_0"
+    }
+  ],
+  "backupLinks": [
+    {
+      "name": "Mega Drive",
+      "url": "https://mega.nz/folder/CxBhyL5B#IEEYCRHMfh2BO0ufoHysWg"
+    }
+  ]
+  },
+  {
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,

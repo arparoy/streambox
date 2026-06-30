@@ -558,6 +558,134 @@
   "backupLinks": []
 },
   {
+  "id": "jaal-season-1",
+  "title": "Jaal – Web Series S1",
+  "year": 2022,
+  "genre": ["Drama"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "/movies/jaal-season-1-cover.jpg",
+  "description": "Nidhi is married into a dysfunctional family where greed and money control every relationship. To survive, she must transform herself in ways she never imagined.",
+  "cast": [
+    "Ramesh Goyal",
+    "Ashraf Saifi",
+    "Abhi Rizvi",
+    "Donna Munshi",
+    "Tanya Chatterjee",
+    "Harthik Yadav",
+    "Muskaan Agrawal"
+  ],
+  "director": "N/A",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p Mega",
+      "url": "https://mega.nz/folder/H9ASFaoY#eiANLqX6ktnFyvqM0b-lrw"
+    }
+  ],
+  "backupLinks": [
+    {
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/14bmPMl6HwcEQy4qsB_dCeO8hQDQP-QFx"
+    }
+  ]
+},
+{
+  "id": "charmsukh-jane-anjane-mein-complete",
+  "title": "Charmsukh – Jane Anjane Mein",
+  "year": 2023,
+  "genre": ["Drama"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1–7",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "/movies/charmsukh-jane-anjane-mein-cover.jpg",
+  "description": "Complete collection of Charmsukh – Jane Anjane Mein Seasons 1 to 7.",
+  "cast": [
+    "Jinnie Jaaz"
+  ],
+  "director": "N/A",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "Complete S1–S7 (1080p)",
+      "url": "https://drive.google.com/drive/folders/119tyurin7I0cHMKuLxQT5I5wGrcKXvxx"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "lust-stories-2",
+  "title": "Lust Stories 2",
+  "year": 2023,
+  "genre": ["Drama", "Romance"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Movie",
+  "size": "5 GB",
+  "rating": "N/A",
+  "cover": "/movies/lust-stories-2-cover.jpg",
+  "description": "An anthology of four contemporary stories exploring love, relationships, intimacy, and human emotions through the perspectives of different characters, each directed by a different filmmaker.",
+  "cast": [
+    "Tamannaah Bhatia",
+    "Neena Gupta",
+    "Mrunal Thakur",
+    "Kajol"
+  ],
+  "director": "R. Balki, Konkona Sen Sharma, Amit Ravindernath Sharma, Sujoy Ghosh",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "url": "https://drive.google.com/file/d/1-AJOkanUdBC7NrHJnHQvyB50RroA_gOo/view?usp=drivesdk"
+    },
+    {
+      "quality": "Lust Stories Collection",
+      "url": "https://drive.google.com/drive/folders/1-HQuuzjmE3mYiGyxq4Qvm3NEPrNPITve"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "lust-stories",
+  "title": "Lust Stories",
+  "year": 2018,
+  "genre": [
+    "Drama",
+    "Romance"
+  ],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "2h",
+  "size": "2.53 GB",
+  "rating": "N/A",
+  "cover": "/movies/lust-stories-cover.jpg",
+  "description": "Lust Stories is an anthology of four thought-provoking films directed by some of India's most celebrated filmmakers. Each story explores modern love, intimacy, desire, marriage, and relationships from a unique perspective, delivering emotionally engaging and realistic narratives.",
+  "cast": [
+    "Radhika Apte",
+    "Bhumi Pednekar",
+    "Kiara Advani",
+    "Vicky Kaushal"
+  ],
+  "director": "Anurag Kashyap, Zoya Akhtar, Dibakar Banerjee, Karan Johar",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "url": "https://drive.google.com/file/d/1-DlzcCWrpidNPqe9BFUDyCqT3Qe146gk/view?usp=drivesdk"
+    },
+    {
+      "quality": "Lust Stories Collection",
+      "url": "https://drive.google.com/drive/folders/1-HQuuzjmE3mYiGyxq4Qvm3NEPrNPITve"
+    }
+  ],
+  "backupLinks": []
+},
+  {
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,

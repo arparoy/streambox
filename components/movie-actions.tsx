@@ -63,7 +63,7 @@ export default function MovieActions({ movie }: { movie: Movie }) {
         className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
           isFavorite && isMounted
             ? 'bg-primary/10 border-primary text-primary' 
-            : 'border-white/10 hover:bg-white/5 text-gray-300'
+            : 'border-border-subtle hover:bg-background text-foreground/80'
         }`}
       >
         <Heart className={`w-4 h-4 ${isFavorite && isMounted ? 'fill-primary' : ''}`} />
@@ -72,7 +72,7 @@ export default function MovieActions({ movie }: { movie: Movie }) {
 
       <button 
         onClick={shareMovie}
-        className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:bg-white/5 text-gray-300 transition-colors"
+        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:bg-background text-foreground/80 transition-colors"
       >
         <Share2 className="w-4 h-4" />
         <span className="text-sm font-medium">Share</span>
@@ -80,7 +80,7 @@ export default function MovieActions({ movie }: { movie: Movie }) {
 
       <button 
         onClick={copyLink}
-        className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:bg-white/5 text-gray-300 transition-colors"
+        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:bg-background text-foreground/80 transition-colors"
       >
         <Copy className="w-4 h-4" />
         <span className="text-sm font-medium">{isCopied ? 'Copied!' : 'Copy Link'}</span>

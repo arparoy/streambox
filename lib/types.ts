@@ -25,4 +25,5 @@ export interface Movie {
   youtubeTrailer?: string;
   downloads: DownloadLink[];
   backupLinks: BackupLink[];
+  trending?: boolean;
 }

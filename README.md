@@ -47,7 +47,16 @@ To add a new movie to StreamBox, follow these simple steps:
 }
 ```
 
-3. Save the file. The website will automatically update and generate the new movie pages.
+### 3. Movie Display Types
+
+- **Regular Movie**: Just add the JSON structure above. It will show up in the Latest Releases grid and search results.
+- **Trending Movie**: Add `"trending": true` to the JSON object. This will pin it to the "Trending Now" section on the homepage.
+  ```json
+  "trending": true,
+  ```
+- **Featured Movie (Slider)**: The hero slider automatically picks the top 5 newest movies based on their `"year"`. To make a movie featured in the top slider, just make sure its `"year"` is among the 5 most recent in the list.
+
+4. Save the file. The website will automatically update and generate the new movie pages.
 
 ## Development
 

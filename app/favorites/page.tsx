@@ -38,20 +38,20 @@ export default function FavoritesPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-dark-card border border-white/5 rounded-xl">
-            <Heart className="w-10 h-10 text-gray-600 mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">No favorites yet</h2>
-            <p className="text-gray-400">Save movies you want to watch later by clicking the heart icon.</p>
+          <div className="text-center py-16 bg-card border border-border-subtle rounded-xl">
+            <Heart className="w-10 h-10 text-foreground/50 mx-auto mb-4" />
+            <h2 className="text-xl font-semibold mb-2 text-foreground">No favorites yet</h2>
+            <p className="text-foreground/70">Save movies you want to watch later by clicking the heart icon.</p>
           </div>
         )}
       </div>
 
       {/* Recently Viewed */}
       {recentMovies.length > 0 && (
-        <div className="border-t border-white/5 pt-12">
+        <div className="border-t border-border-subtle pt-12">
           <div className="flex items-center gap-3 mb-8">
-            <Clock className="w-6 h-6 text-gray-400" />
-            <h2 className="text-2xl font-bold tracking-tight text-gray-200">
+            <Clock className="w-6 h-6 text-foreground/60" />
+            <h2 className="text-2xl font-bold tracking-tight text-foreground/90">
               Recently Viewed
             </h2>
           </div>

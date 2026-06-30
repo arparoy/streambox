@@ -14,6 +14,7 @@
     "cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
     "director": "James Cameron",
     "youtubeTrailer": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+    "trending": true,
     "downloads": [
       { "quality": "480p", "url": "#" },
       { "quality": "720p", "url": "#" },
@@ -61,6 +62,7 @@
     "cast": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
     "director": "Denis Villeneuve",
     "youtubeTrailer": "https://www.youtube.com/watch?v=Way9Dexny3w",
+    "trending": true,
     "downloads": [
       { "quality": "720p", "url": "#" },
       { "quality": "1080p", "url": "#" }
@@ -107,6 +109,7 @@
     "cast": ["Shameik Moore", "Hailee Steinfeld", "Brian Tyree Henry"],
     "director": "Joaquim Dos Santos",
     "youtubeTrailer": "https://www.youtube.com/watch?v=shW9i6k8cB0",
+    "trending": true,
     "downloads": [
       { "quality": "720p", "url": "#" },
       { "quality": "1080p", "url": "#" }

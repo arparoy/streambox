@@ -3,19 +3,38 @@
 @theme {
   --color-primary: #e50914;
   --color-primary-hover: #f40612;
-  --color-dark: #0f0f0f;
-  --color-dark-card: #181818;
+  --color-background: var(--bg-color);
+  --color-foreground: var(--text-color);
+  --color-card: var(--card-bg);
+  --color-border-subtle: var(--border-color);
+  --color-glass: var(--glass-bg);
+}
+
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+.dark {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --card-bg: #181818;
+  --border-color: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(24, 24, 24, 0.75);
 }
 
 body {
-  background-color: var(--color-dark);
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
 }
 
 .glassmorphism {
-  background: rgba(24, 24, 24, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
 }

@@ -251,23 +251,19 @@
   "rating": "N/A",
   "cover": "/movies/size-matters-cover.jpg",
   "description": "An anthology drama series exploring relationships, self-esteem, trust, and the impact of societal expectations through two different stories across two seasons.",
-  "cast": {
-    "season1": [
-      "Riju Biswas",
-      "Khatija Iqbal",
-      "Tejdeep Gill",
-      "Poorti Arya",
-      "Priyanka Bora",
-      "Momita Jaise",
-      "Meghna Datta"
-    ],
-    "season2": [
-      "Ravi Bhatia",
-      "Karan Singh",
-      "Anmol",
-      "Rohila Tripura"
-    ]
-  },
+  "cast": [
+  "Riju Biswas",
+  "Khatija Iqbal",
+  "Tejdeep Gill",
+  "Poorti Arya",
+  "Priyanka Bora",
+  "Momita Jaise",
+  "Meghna Datta",
+  "Ravi Bhatia",
+  "Karan Singh",
+  "Anmol",
+  "Rohila Tripura"
+]
   "director": "N/A",
   "youtubeTrailer": "",
   "downloads": [

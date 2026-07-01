@@ -8,14 +8,17 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  // Allow access to remote image placeholder.
+  // Allow images from ANY remote host (e.g. raw.githubusercontent.com,
+  // your own GitHub repo, or any other direct image URL).
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**', // This allows any path under the hostname
+        hostname: '**', // any HTTPS host
+      },
+      {
+        protocol: 'http',
+        hostname: '**', // any HTTP host
       },
     ],
   },

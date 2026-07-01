@@ -2766,6 +2766,35 @@
   "backupLinks": []
 },
   {
+  "id": "red-light",
+  "title": "Red Light",
+  "year": 2024,
+  "genre": ["Drama", "Thriller"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+"trending": true,
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/red-light.jpg",
+  "description": "When Prabha follows her husband to Rajkot, she unknowingly enters a brothel, setting off a dangerous chain of events. As Rahul races against time to rescue her, hidden truths, emotional struggles, and life-threatening challenges unfold in this suspense-filled ULLU drama.",
+  "cast": [
+    "Aayat Khan",
+    "Alina Sen",
+    "Jagjeet Chachal"
+  ],
+  "director": "Unknown",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/110QMk4PYmC-coNpn7mpx18tUoukgDX-f"
+    }
+  ],
+  "backupLinks": []
+  },
+  {
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,

@@ -154,7 +154,11 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
                 <h4 className="font-medium text-foreground/80">Genres</h4>
                 <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
                   {categories.map(genre => (
-                    <label key={genre} className="flex items-center gap-3 cursor-pointer group">
+                    <label
+                      key={genre}
+                      className="flex items-center gap-3 cursor-pointer group"
+                      onClick={() => toggleFilter(genre, selectedGenres, setSelectedGenres)}
+                    >
                       <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedGenres.includes(genre) ? 'bg-primary border-primary' : 'border-border-subtle group-hover:border-primary/50'}`}>
                         {selectedGenres.includes(genre) && <Check className="w-3.5 h-3.5 text-white" />}
                       </div>
@@ -169,7 +173,11 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
                 <h4 className="font-medium text-foreground/80">Release Year</h4>
                 <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
                   {years.map(year => (
-                    <label key={year} className="flex items-center gap-3 cursor-pointer group">
+                    <label
+                      key={year}
+                      className="flex items-center gap-3 cursor-pointer group"
+                      onClick={() => toggleFilter(year, selectedYears, setSelectedYears)}
+                    >
                       <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedYears.includes(year) ? 'bg-primary border-primary' : 'border-border-subtle group-hover:border-primary/50'}`}>
                         {selectedYears.includes(year) && <Check className="w-3.5 h-3.5 text-white" />}
                       </div>
@@ -184,7 +192,11 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
                 <h4 className="font-medium text-foreground/80">Quality</h4>
                 <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
                   {qualities.map(quality => (
-                    <label key={quality} className="flex items-center gap-3 cursor-pointer group">
+                    <label
+                      key={quality}
+                      className="flex items-center gap-3 cursor-pointer group"
+                      onClick={() => toggleFilter(quality, selectedQualities, setSelectedQualities)}
+                    >
                       <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedQualities.includes(quality) ? 'bg-primary border-primary' : 'border-border-subtle group-hover:border-primary/50'}`}>
                         {selectedQualities.includes(quality) && <Check className="w-3.5 h-3.5 text-white" />}
                       </div>

@@ -1830,6 +1830,43 @@
   "backupLinks": []
 },
   {
+  "id": "krissy-lynn",
+  "title": "Krissy Lynn",
+  "year": 2024,
+  "type": "collection",
+  "genre": ["Video Collection"],
+  "language": "English",
+  "quality": "1080p",
+  "duration": "Various",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/krissy-lynn.jpg",
+  "description": "A 1080p collection featuring Krissy Lynn videos along with additional videos and a complete files archive.",
+  "cast": [
+    "Krissy Lynn"
+  ],
+  "director": "N/A",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p",
+      "label": "Main Video",
+      "url": "https://drive.google.com/drive/folders/10ptrey5G7Wr7isw74hIP6X6vu5-h_PCP"
+    },
+    {
+      "quality": "1080p",
+      "label": "Other Videos",
+      "url": "https://drive.google.com/drive/folders/13UcCQlSwrGJunv265LoTvE1KuYDy4dFl"
+    },
+    {
+      "quality": "1080p",
+      "label": "Complete Files",
+      "url": "https://drive.google.com/drive/folders/10pRjQA2RQAo6TcZ7rczAEPvZpSbxiuuq"
+    }
+  ],
+  "backupLinks": []
+  },
+  {
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,

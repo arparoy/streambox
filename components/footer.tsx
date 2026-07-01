@@ -28,18 +28,17 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-foreground/90">Legal</h3>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">DMCA</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Disclaimer</Link></li>
+              <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/dmca" className="hover:text-primary transition-colors">DMCA</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-foreground/90">Contact</h3>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li>contact@streambox.example</li>
-              <li>support@streambox.example</li>
+              <li><a href="mailto:arparoycollection@gmail.com" className="hover:text-primary transition-colors">arparoycollection@gmail.com</a></li>
             </ul>
           </div>
         </div>

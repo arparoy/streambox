@@ -313,19 +313,31 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
             </button>
             
             <div className="flex items-center gap-2">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPage(i + 1)}
-                  className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors ${
-                    currentPage === i + 1 
-                      ? 'bg-primary text-white' 
-                      : 'bg-card border border-border-subtle hover:bg-background text-foreground'
-                  }`}
-                >
-                  {i + 1}
-                </button>
-              ))}
+              {(() => {
+                const windowSize = 5;
+                let start = Math.max(1, currentPage - Math.floor(windowSize / 2));
+                let end = start + windowSize - 1;
+                if (end > totalPages) {
+                  end = totalPages;
+                  start = Math.max(1, end - windowSize + 1);
+                }
+                return Array.from({ length: end - start + 1 }).map((_, i) => {
+                  const page = start + i;
+                  return (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === page
+                          ? 'bg-primary text-white'
+                          : 'bg-card border border-border-subtle hover:bg-background text-foreground'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  );
+                });
+              })()}
             </div>
 
             <button

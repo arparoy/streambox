@@ -3108,5 +3108,111 @@
     }
   ],
   "backupLinks": []
+},
+  {
+  "id": "graduate-with-first-class",
+  "title": "Graduate With First Class",
+  "year": 2024,
+  "genre": ["Drama", "Romance"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/graduate-with-first-class.jpg",
+  "description": "Graduate With First Class S01 is an Atrangii Original drama directed by Rafat Abbas. The story follows Amit, a young man torn between Maya's influence and Niharika's sincere affection. As love, redemption, and difficult choices shape his journey, he must decide the path that will define his future.",
+  "cast": [
+    "Ankita Bhattacharya",
+    "Ayushi Bhowmick",
+    "Kajal Agarwal"
+  ],
+  "director": "Rafat Abbas",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1wuRMNbwq3KPC7PphbmPvAhgmXjYPgwZs"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "sassy-poonam",
+  "title": "Sassy Poonam",
+  "year": 2026,
+  "genre": ["Photos", "Videos", "Social Media"],
+  "language": "Hindi",
+  "quality": "HD",
+  "duration": "Collection",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/sassy-poonam.jpg",
+  "description": "A collection featuring Sassy Poonam's public photos, videos, reels, and social media content in high quality. Browse the complete collection with direct download links.",
+  "cast": [
+    "Sassy Poonam"
+  ],
+  "director": "",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "Collection",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1klnNfZhV6b3naNH5Wzn3luou1OaECSIB"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "sky-kastle-2",
+  "title": "Sky Kastle 2",
+  "year": 2023,
+  "genre": ["Drama", "Romance"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Short Film",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/sky-kastle-2.jpg",
+  "description": "Sky Kastle 2 (2023) is a Hindi short film that blends drama and romance into an emotional story filled with relationships, passion, and unexpected twists. Available in high-quality WEB-DL formats for an enjoyable viewing experience.",
+  "cast": [],
+  "director": "",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-fWlNgH5jEUutg1T-d4if8Z3FJSQc2De"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "suno-sasurji",
+  "title": "Suno Sasurji",
+  "year": 2020,
+  "genre": ["Drama"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/suno-sasurji.jpg",
+  "description": "Suno Sasurji (2020) is a Kooku Original web series directed by Azaad Bharti. The story follows a married couple whose relationship is tested by personal struggles and complicated family dynamics, leading to emotional conflicts and unexpected twists. Available in high-quality 1080p WEB-DL.",
+  "cast": [
+    "Amit Kumar",
+    "Kumari Simran",
+    "Pintu Kumar"
+  ],
+  "director": "Azaad Bharti",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/104V_fLJTpDC8Hd6wk2mbXHTDhF1U_uFy"
+    }
+  ],
+  "backupLinks": []
 }
 ]

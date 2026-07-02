@@ -1,24 +1,25 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { Movie } from '@/lib/types';
 import MovieCard from '@/components/movie-card';
 import { MovieCardSkeleton } from '@/components/movie-card-skeleton';
 import { motion, AnimatePresence } from 'motion/react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Filter, ChevronLeft, ChevronRight, LayoutGrid, List as ListIcon, X, SlidersHorizontal, Check } from 'lucide-react';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import Image from 'next/image';
 
-export default function MovieGrid({ initialMovies, categories }: { initialMovies: Movie[], categories: string[] }) {
+export default function MovieGrid({ initialMovies, categories, currentPage = 1 }: { initialMovies: Movie[], categories: string[], currentPage?: number }) {
   const searchParams = useSearchParams();
   const searchParam = searchParams.get('search') || '';
+  const router = useRouter();
   
   const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
   const [selectedYears, setSelectedYears] = useState<number[]>([]);
   const [selectedQualities, setSelectedQualities] = useState<string[]>([]);
   
-  const [currentPage, setCurrentPage] = useState(1);
   const [viewMode, setViewMode] = useLocalStorage<'grid' | 'list'>('viewMode', 'grid');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -38,10 +39,20 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
     return () => clearTimeout(timer);
   }, [searchParam, selectedGenres, selectedYears, selectedQualities, currentPage, viewMode]);
 
-  // Reset page when filters change
+  // Reset to page 1 (home) when filters change, but skip the initial render
+  // so that direct navigation to /pages/N is respected.
+  const isFirstRender = useRef(true);
   useEffect(() => {
-    setCurrentPage(1);
-  }, [selectedGenres, selectedYears, selectedQualities, searchParam]);
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (currentPage !== 1) {
+      router.push('/');
+    }
+  }, [selectedGenres, selectedYears, selectedQualities, searchParam, currentPage, router]);
+
+  const pageHref = (page: number) => (page <= 1 ? '/' : `/pages/${page}`);
 
   const filteredMovies = useMemo(() => {
     let filtered = initialMovies;
@@ -304,13 +315,19 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
         {/* Pagination */}
         {!isLoading && totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 pt-8 border-t border-border-subtle">
-            <button
-              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-              disabled={currentPage === 1}
-              className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-foreground"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+            {currentPage === 1 ? (
+              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-50 cursor-not-allowed text-foreground">
+                <ChevronLeft className="w-5 h-5" />
+              </span>
+            ) : (
+              <Link
+                href={pageHref(currentPage - 1)}
+                aria-label="Previous page"
+                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background transition-colors text-foreground"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Link>
+            )}
             
             <div className="flex items-center gap-2">
               {(() => {
@@ -324,29 +341,35 @@ export default function MovieGrid({ initialMovies, categories }: { initialMovies
                 return Array.from({ length: end - start + 1 }).map((_, i) => {
                   const page = start + i;
                   return (
-                    <button
+                    <Link
                       key={page}
-                      onClick={() => setCurrentPage(page)}
-                      className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors ${
+                      href={pageHref(page)}
+                      className={`flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-colors ${
                         currentPage === page
                           ? 'bg-primary text-white'
                           : 'bg-card border border-border-subtle hover:bg-background text-foreground'
                       }`}
                     >
                       {page}
-                    </button>
+                    </Link>
                   );
                 });
               })()}
             </div>
 
-            <button
-              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-              disabled={currentPage === totalPages}
-              className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-foreground"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            {currentPage >= totalPages ? (
+              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-50 cursor-not-allowed text-foreground">
+                <ChevronRight className="w-5 h-5" />
+              </span>
+            ) : (
+              <Link
+                href={pageHref(currentPage + 1)}
+                aria-label="Next page"
+                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background transition-colors text-foreground"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+            )}
           </div>
         )}
       </div>

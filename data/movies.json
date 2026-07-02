@@ -2799,145 +2799,308 @@
   "backupLinks": []
   },
   {
-    "id": "avatar",
-    "title": "Avatar",
-    "year": 2009,
-    "genre": ["Action", "Adventure", "Sci-Fi"],
-    "language": "English",
-    "quality": "1080p BluRay",
-    "duration": "2h 42m",
-    "size": "2.8 GB",
-    "rating": "7.8",
-    "cover": "https://picsum.photos/seed/avatar/800/1200",
-    "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-    "cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
-    "director": "James Cameron",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
-    "trending": true,
-    "downloads": [
-      { "quality": "480p", "url": "#" },
-      { "quality": "720p", "url": "#" },
-      { "quality": "1080p", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  },
-  {
-    "id": "john-wick-4",
-    "title": "John Wick: Chapter 4",
-    "year": 2023,
-    "genre": ["Action", "Crime", "Thriller"],
-    "language": "English",
-    "quality": "4K UHD",
-    "duration": "2h 49m",
-    "size": "5.2 GB",
-    "rating": "7.7",
-    "cover": "https://picsum.photos/seed/johnwick/800/1200",
-    "description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
-    "cast": ["Keanu Reeves", "Laurence Fishburne", "George Georgiou"],
-    "director": "Chad Stahelski",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=qEVUtrk8_B4",
-    "downloads": [
-      { "quality": "1080p", "url": "#" },
-      { "quality": "4K", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  },
-  {
-    "id": "dune-part-two",
-    "title": "Dune: Part Two",
-    "year": 2024,
-    "genre": ["Action", "Adventure", "Drama", "Sci-Fi"],
-    "language": "English",
-    "quality": "1080p Web-DL",
-    "duration": "2h 46m",
-    "size": "3.1 GB",
-    "rating": "8.6",
-    "cover": "https://picsum.photos/seed/dune/800/1200",
-    "description": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
-    "cast": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
-    "director": "Denis Villeneuve",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=Way9Dexny3w",
-    "trending": true,
-    "downloads": [
-      { "quality": "720p", "url": "#" },
-      { "quality": "1080p", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  },
-  {
-    "id": "oppenheimer",
-    "title": "Oppenheimer",
-    "year": 2023,
-    "genre": ["Biography", "Drama", "History"],
-    "language": "English",
-    "quality": "4K UHD",
-    "duration": "3h 0m",
-    "size": "4.5 GB",
-    "rating": "8.4",
-    "cover": "https://picsum.photos/seed/oppenheimer/800/1200",
-    "description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
-    "cast": ["Cillian Murphy", "Emily Blunt", "Matt Damon"],
-    "director": "Christopher Nolan",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=uYPbbksJxIg",
-    "downloads": [
-      { "quality": "1080p", "url": "#" },
-      { "quality": "4K", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  },
-  {
-    "id": "spiderman-across-the-spiderverse",
-    "title": "Spider-Man: Across the Spider-Verse",
-    "year": 2023,
-    "genre": ["Animation", "Action", "Adventure"],
-    "language": "English",
-    "quality": "1080p Web-DL",
-    "duration": "2h 20m",
-    "size": "2.2 GB",
-    "rating": "8.6",
-    "cover": "https://picsum.photos/seed/spiderman/800/1200",
-    "description": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.",
-    "cast": ["Shameik Moore", "Hailee Steinfeld", "Brian Tyree Henry"],
-    "director": "Joaquim Dos Santos",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=shW9i6k8cB0",
-    "trending": true,
-    "downloads": [
-      { "quality": "720p", "url": "#" },
-      { "quality": "1080p", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  },
-  {
-    "id": "the-dark-knight",
-    "title": "The Dark Knight",
-    "year": 2008,
-    "genre": ["Action", "Crime", "Drama"],
-    "language": "English",
-    "quality": "1080p BluRay",
-    "duration": "2h 32m",
-    "size": "2.9 GB",
-    "rating": "9.0",
-    "cover": "https://picsum.photos/seed/darkknight/800/1200",
-    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
-    "director": "Christopher Nolan",
-    "youtubeTrailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-    "downloads": [
-      { "quality": "720p", "url": "#" },
-      { "quality": "1080p", "url": "#" }
-    ],
-    "backupLinks": [
-      { "name": "Backup Server", "url": "#" }
-    ]
-  }
+  "id": "hiral-radadiya",
+  "title": "Hiral Radadiya",
+  "year": 2026,
+  "genre": ["Drama", "Romance", "Thriller"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Collection",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/hiral-radadiya.jpg",
+  "description": "Complete Hiral Radadiya Web Series Collection featuring her most popular web series, short films, and exclusive releases in 1080p WEB-DL quality. Browse the complete collection with direct download buttons for each title.",
+  "cast": [
+    "Hiral Radadiya"
+  ],
+  "director": "Various",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "Maajra Mastram",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-0oYRo1TNcBeBPSScSOlDf8k9kcJNcyN"
+    },
+    {
+      "quality": "Rangeen Kahaniyan - Punarjanam S08E01-04",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-lhgE8rNgvpUW2C8KAneqop4zwrb2Ruk"
+    },
+    {
+      "quality": "Balam Pichkari Part 1-2",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/18_PUc0jp81KDF7QF58A6RdAVbqzsNLHK"
+    },
+    {
+      "quality": "Dr. Kajal Episode 01-02",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/10f65WTppTLpzQShou4MPwwv1u_3xUeHp"
+    },
+    {
+      "quality": "Chui Mui S01",
+      "name": "Dropbox",
+      "url": "https://www.dropbox.com/scl/fo/66a5qsvyvukcssx2rewxt/AFamoUmWaCGJ9twzbue81JI?rlkey=xwim2ma4fia3z93cox4x7k6z3&st=w3ck77bu&dl=0"
+    },
+    {
+      "quality": "Rasgulla",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1tNfvVPj-4keStSFzDGCXZ33B-0PR29uZ"
+    },
+    {
+      "quality": "Fraud Ishq Short Film",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/13NHSR48WWurHdlkA02CUh221dzPKABks"
+    },
+    {
+      "quality": "Intercourse 2 Short Film",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-P1hcoBVlytnQFtfN1pSGaHlPUCsC9Fw"
+    },
+    {
+      "quality": "The Story of My Wife",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1CCG-5whjUUSWxicWXZiN79HsgnXQU5Jm"
+    },
+{
+      "quality": "The Story of My Wife",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-5oIroYLIutwC4RNwQ7BroMHcmpPitFC"
+    },
+    {
+      "quality": "Rangeen Kahaniyan - Benami Shadi E01-04",
+      "name": "pCloud",
+      "url": "https://u.pcloud.link/publink/show?code=kZKzdp5Zofoi6eJeHRpHKKYNeW2TuhlKvoz7"
+    },
+    {
+      "quality": "Palang Tod - Saali Aadhi Gharwaali",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/12STVH69qepx9uak1Q1jOOxdOQsJcAlz_"
+    },
+    {
+      "quality": "Utha Patak ALTT Web Series - Season 1 Episode 01-06",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/11ASxsGlH4vVB2soooeLtU4vTXxcAXwF_"
+    },
+    {
+      "quality": "Dil Sambhal Ja Zara S01E01-06",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/15rzsA95sc5BI1FscPRuRAvKABJ3VZCWN"
+    },
+    {
+      "quality": "Majnu Chacha Hindi Season 01 Episode 01-04",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/10DahRYZhrnKWzSeuMuZTWxsOu0z7QqmD"
+    },
+    {
+      "quality": "Rangeen Kahaniyan: Pyaari Bhabhi",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/124kyG_rIBrQX2vXHxgbpNvhrJX-g_PiV"
+    },
+    {
+      "quality": "Hiral Radadiya Uncut Collection - Drive 1",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1--MtndfaT4a9QzghEQL5QmN3RIg7dhpN"
+    },
+    {
+      "quality": "Hiral Radadiya Uncut Collection - Drive 2",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1Uv5fgP5AA1RQpY8nllXyyXVXow2iEULF?usp=sharing"
+    },
+    {
+      "quality": "Chaahat Short Film",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-693MTras8rUIIkS2Gr3X-qjiHqjgHpe"
+    },
+    {
+      "quality": "Charmsukh - Promotion",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/14sFA98mbVJtDG-pZrFDenxknCm9ZTjmx"
+    },
+    {
+      "quality": "Tharki Boss",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/16iO6GvqygNaPG_GVTQqzLUZ-7YZz6c7H"
+    },
+    {
+      "quality": "Maili Chader S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/115oNupg73FmiHM-K-d0_IzvKmDM2yTWq"
+    },
+    {
+      "quality": "Gang Bang",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/18QtZgVY-cRoZ8julPJFlEAEAz3f4odBG"
+    },
+    {
+      "quality": "Miss Rosy S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/11YgA5G24YEJgkdzZbYz3I4SPTvT5AZli"
+    },
+    {
+      "quality": "Kidnapped",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/12IOAFMWhI9h7W2KRXYv46NAFLbzPE180"
+    },
+    {
+      "quality": "Malkin Bhabhi S01-S02",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1y53eotriXxmkDS-x16jNj75MqeGyqK5s"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "manvi-chugh",
+  "title": "Manvi Chugh",
+  "year": 2026,
+  "genre": ["Drama", "Romance", "Thriller"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Collection",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/manvi-chugh.jpg",
+  "description": "Complete Manvi Chugh Web Series Collection featuring her popular web series and original releases in 1080p WEB-DL quality. Browse the complete collection with direct Google Drive download buttons for every title.",
+  "cast": [
+    "Manvi Chugh"
+  ],
+  "director": "Various",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "Dubai Bhauji S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-KFOR8tPjHukbckGMuyCOGPTcjxm6XEU"
+    },
+    {
+      "quality": "Rangeen Kahaniyan: Pyaari Bhabhi",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/124kyG_rIBrQX2vXHxgbpNvhrJX-g_PiV"
+    },
+    {
+      "quality": "Daan S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-3arf_ok1IuTtL3DURGftu5n5YkhSLZw"
+    },
+    {
+      "quality": "Rangeen Kahaniyan: Lehenga Chunri Season 2",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/14_1DaUcHr1M3Aj-iE2wn8l27tsax2XQO"
+    },
+    {
+      "quality": "Sex Education",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-RftLwXOiMXX85kS1cepViKqoVy9It8p"
+    },
+    {
+      "quality": "Bittu",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1upKRHqD1BvwWr1eQ7ShqKmciydyU-jC9"
+    },
+    {
+      "quality": "Jabariya Dulhan S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-udRqs3NbIyK1qIEatgEozL_Qww51u11"
+    },
+    {
+      "quality": "Imli Bhabhi S01",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-Z6bN2u-MYulyjiSUpm65HRgE-YvJSUA"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "corporate",
+  "title": "Corporate",
+  "year": 2024,
+  "genre": ["Drama", "Thriller"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/corporate.jpg",
+  "description": "Corporate is a ULLU Original drama that explores the ruthless world of business, ambition, and family betrayal. Mukesh Oberoi's powerful business empire is threatened when his son Siddharth's greed-driven decisions spark a fierce battle for control. As loyalty is tested and hidden motives emerge, the family becomes entangled in a dramatic struggle where power comes at a heavy price.",
+  "cast": [
+    "Ayaat Khan",
+    "Gungun",
+    "Heral"
+  ],
+  "director": "Unknown",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-LmpQFVzC6RN1MuLOZj3gOIbZ40fg_-e"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "kala-khatta",
+  "title": "Kala Khatta",
+  "year": 2024,
+  "genre": ["Drama", "Thriller"],
+  "language": "Hindi",
+  "quality": "1080p WEB-DL",
+  "duration": "Season 1",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/kala-khatta.jpg",
+  "description": "Kala Khatta is a ULLU Original drama thriller directed by Fahad Kashmiri and Raifee. The story follows Bholi, who visits her uncle Rajesh for a baby shower but soon finds herself trapped in a web of manipulation, betrayal, and revenge. As dark secrets unfold, the series delivers unexpected twists and an intense emotional journey.",
+  "cast": [
+    "Ajay Singh",
+    "Ayushi Bhowmick",
+    "Mamta",
+    "Sarika Salunkhe"
+  ],
+  "director": "Fahad Kashmiri, Raifee",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "1080p WEB-DL",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/101N3tAzdBerAcupnY2PVA-0DtNOaywTd"
+    }
+  ],
+  "backupLinks": []
+},
+{
+  "id": "simran-kaur",
+  "title": "Simran Kaur",
+  "year": 2026,
+  "genre": ["Photos", "Videos", "Social Media"],
+  "language": "Hindi",
+  "quality": "HD",
+  "duration": "Collection",
+  "size": "Various",
+  "rating": "N/A",
+  "cover": "https://raw.githubusercontent.com/arparoy/storeimg/refs/heads/main/public/movies/simran-kaur.jpg",
+  "description": "A collection featuring Simran Kaur's public photos, videos, and social media content in high quality. Browse the complete collection with direct download links.",
+  "cast": [
+    "Simran Kaur"
+  ],
+  "director": "",
+  "youtubeTrailer": "",
+  "downloads": [
+    {
+      "quality": "Collection - Drive 1",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-5B2Jd1Vu721p-gTZwHfW-UJePROQw9W"
+    },
+    {
+      "quality": "Collection - Drive 2",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-8jD-NeLJXeffAqeK5TCy0pw9CL4nush"
+    },
+    {
+      "quality": "Collection - Drive 3",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/drive/folders/1-F9XzQCv_F-v7Ue-HsTUThxHvHrHqFIh"
+    }
+  ],
+  "backupLinks": []
+}
 ]

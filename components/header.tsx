@@ -56,6 +56,7 @@ export default function Header() {
               <Link href="/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">Home</Link>
               <Link href="/categories" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">Categories</Link>
               <Link href="/favorites" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">Favorites</Link>
+              <Link href="/random" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">Random</Link>
             </nav>
           </div>
 
@@ -236,6 +237,7 @@ export default function Header() {
                 <Link href="/" className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-background rounded-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
                 <Link href="/categories" className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-background rounded-lg" onClick={() => setIsMenuOpen(false)}>Categories</Link>
                 <Link href="/favorites" className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-background rounded-lg" onClick={() => setIsMenuOpen(false)}>Favorites</Link>
+                <Link href="/random" className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-background rounded-lg" onClick={() => setIsMenuOpen(false)}>Random</Link>
               </nav>
             </div>
           </motion.div>

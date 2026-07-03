@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import BackToTop from '@/components/back-to-top';
+import WelcomePopup from '@/components/welcome-popup';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -39,6 +40,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </main>
           <Footer />
           <BackToTop />
+          <WelcomePopup />
         </ThemeProvider>
       </body>
     </html>

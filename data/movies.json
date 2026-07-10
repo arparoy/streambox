@@ -3159,6 +3159,11 @@
       "quality": "Collection",
       "name": "Google Drive",
       "url": "https://drive.google.com/drive/folders/1klnNfZhV6b3naNH5Wzn3luou1OaECSIB"
+    },
+    {
+      "quality": "Collection",
+      "name": "Google Photos",
+      "url": "https://photos.app.goo.gl/wtVcb9cxkfpiDw8ZA"
     }
   ],
   "backupLinks": []

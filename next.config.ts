@@ -35,6 +35,12 @@ const nextConfig: NextConfig = {
       config.watchOptions = {
         ignored: /.*/,
       };
+    } else if (dev) {
+      // Bind mounts in Docker often miss inotify events; poll so edits hot-reload.
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+      };
     }
     return config;
   },

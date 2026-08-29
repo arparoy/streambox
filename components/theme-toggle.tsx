@@ -14,7 +14,7 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="p-2 rounded-full border border-border-subtle bg-card opacity-50">
+      <button className="p-2 rounded-full border border-border-subtle bg-card opacity-50" aria-label="Toggle theme">
         <Moon className="w-4 h-4 text-foreground/50" />
       </button>
     );
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
-        <Sun className="w-4 h-4 text-yellow-400" />
+        <Sun className="w-4 h-4 text-foreground/70" />
       ) : (
         <Moon className="w-4 h-4 text-foreground/70" />
       )}

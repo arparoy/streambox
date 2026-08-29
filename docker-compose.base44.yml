@@ -9,8 +9,6 @@ services:
       - PORT=3000
       - HOSTNAME=0.0.0.0
       - BASE44_PUBLIC_HOST_SUFFIX=${BASE44_PUBLIC_HOST_SUFFIX:-localhost}
-      - GEMINI_API_KEY=${GEMINI_API_KEY:-placeholder}
-      - APP_URL=${APP_URL:-http://localhost:3000}
     volumes:
       - ./:/app
       - /app/node_modules

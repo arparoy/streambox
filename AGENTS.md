@@ -5,10 +5,8 @@ A fully static Next.js 15 (App Router) movie catalog. All content comes from loc
 (`data/movies.json`, `data/random.json`) — **no backend, no database, no API calls**.
 
 ## Secrets
-None required to boot. `.env.example` lists `GEMINI_API_KEY` / `APP_URL`, but neither is
-referenced anywhere in the code (`grep` for `@google/genai` / `process.env` returns nothing).
-They are wired as harmless placeholders in `docker-compose.base44.yml` only so config that
-reads them doesn't crash.
+None. The app is fully static — no backend, database, or external API. All Gemini /
+AI-Studio references and unused dependencies have been removed.
 
 ## Running
 ```

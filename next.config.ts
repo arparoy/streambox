@@ -2,6 +2,10 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Allow the Base44 preview origin (changes whenever the env is recreated).
+  allowedDevOrigins: process.env.BASE44_PUBLIC_HOST_SUFFIX
+    ? [`3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`]
+    : [],
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -25,11 +29,11 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
-    // HMR is disabled in AI Studio via DISABLE_HMR env var.
-    // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-    if (dev && process.env.DISABLE_HMR === 'true') {
+    // Bind mounts in Docker often miss inotify events; poll so edits hot-reload.
+    if (dev) {
       config.watchOptions = {
-        ignored: /.*/,
+        poll: 1000,
+        aggregateTimeout: 300,
       };
     }
     return config;

@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import BackToTop from '@/components/back-to-top';
 import WelcomePopup from '@/components/welcome-popup';
+import LoadingScreen from '@/components/loading-screen';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -33,7 +34,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${inter.className} min-h-screen flex flex-col selection:bg-primary/30 selection:text-white`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <LoadingScreen />
           <Header />
           <main className="flex-grow">
             {children}

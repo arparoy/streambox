@@ -16,11 +16,11 @@ export default function Home() {
 
       <TrendingNow />
 
-      <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">
+      <div className="mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-foreground">
           Latest <span className="text-primary">Releases</span>
         </h1>
-        <p className="text-foreground/70 text-lg max-w-2xl">
+        <p className="text-foreground/50 text-sm max-w-2xl">
           Download the most anticipated movies of the year in high quality. Enjoy a seamless viewing experience with our curated collection.
         </p>
       </div>

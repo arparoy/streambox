@@ -43,22 +43,22 @@ export default function WelcomePopup() {
         >
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
             aria-hidden="true"
           />
 
           {/* Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.97, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            exit={{ opacity: 0, scale: 0.97, y: 16 }}
             transition={{ type: 'spring', duration: 0.4 }}
-            className="relative w-full max-w-md bg-card border border-border-subtle rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-md bg-card border border-border-subtle rounded-xl shadow-xl overflow-hidden"
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-foreground/50 hover:text-foreground transition-colors p-1 rounded-full hover:bg-background"
+              className="absolute top-4 right-4 text-foreground/40 hover:text-foreground transition-colors p-1 rounded-full hover:bg-background"
               aria-label="Close popup"
             >
               <X className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function WelcomePopup() {
                 We do not store any files
               </h2>
 
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70 text-pretty">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/60 text-pretty">
                 StreamBox does not host, upload, or store any content on its servers. All
                 links and media are provided by third-party sources and are indexed for
                 convenience only.
@@ -84,7 +84,7 @@ export default function WelcomePopup() {
               <p className="text-sm font-medium text-foreground">
                 Join our community on Discord!
               </p>
-              <p className="mt-1 text-xs text-foreground/60 text-pretty">
+              <p className="mt-1 text-xs text-foreground/50 text-pretty">
                 Get updates, request titles, and chat with other members.
               </p>
 
@@ -100,7 +100,7 @@ export default function WelcomePopup() {
 
               <button
                 onClick={() => setIsOpen(false)}
-                className="mt-3 text-xs text-foreground/50 hover:text-foreground transition-colors"
+                className="mt-3 text-xs text-foreground/40 hover:text-foreground transition-colors"
               >
                 Continue to site
               </button>

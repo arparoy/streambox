@@ -11,23 +11,26 @@ export default function CategoriesPage() {
   const categories = getAllCategories();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-4xl font-bold tracking-tight mb-8">
-        Browse by <span className="text-primary">Categories</span>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 min-h-screen">
+      <h1 className="font-[family-name:var(--font-display)] font-extrabold tracking-tight mb-10 text-foreground"
+        style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
+        Browse by <span className="text-primary text-glow">Categories</span>
       </h1>
       
-      <div className="space-y-16">
+      <div className="space-y-20">
         {categories.map((category) => {
           const catMovies = getMoviesByCategory(category).slice(0, 6);
           if (catMovies.length === 0) return null;
 
           return (
             <div key={category} className="space-y-6">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <h2 className="text-2xl font-bold">{category}</h2>
+              <div className="flex items-center justify-between border-b border-border-subtle pb-4">
+                <h2 className="font-[family-name:var(--font-display)] font-bold text-2xl text-foreground" style={{ letterSpacing: '-0.03em' }}>
+                  {category}
+                </h2>
                 <Link 
                   href={`/?search=&genre=${category}`}
-                  className="text-sm text-primary hover:underline"
+                  className="text-sm text-primary hover:text-primary-hover transition-colors font-[family-name:var(--font-mono)] uppercase tracking-wider"
                 >
                   View All
                 </Link>

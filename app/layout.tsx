@@ -5,10 +5,26 @@ import Footer from '@/components/footer';
 import BackToTop from '@/components/back-to-top';
 import WelcomePopup from '@/components/welcome-popup';
 import LoadingScreen from '@/components/loading-screen';
-import { Inter } from 'next/font/google';
+import { Inter_Tight, Public_Sans, JetBrains_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const inter = Inter({ subsets: ['latin'] });
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const publicSans = Public_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -32,9 +48,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning className={`${inter.className} min-h-screen flex flex-col selection:bg-primary/30 selection:text-white`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+    <html lang="en" suppressHydrationWarning className={`${interTight.variable} ${publicSans.variable} ${jetbrainsMono.variable}`}>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col selection:bg-primary/30 selection:text-white">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <LoadingScreen />
           <Header />
           <main className="flex-grow">

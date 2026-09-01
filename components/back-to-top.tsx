@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 400) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -21,21 +21,24 @@ export default function BackToTop() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (!isVisible) return null;
-
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors z-50 group"
-      aria-label="Back to top"
-    >
-      <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
-    </button>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors z-50 group"
+          style={{ boxShadow: '0 0 20px var(--color-primary-glow)' }}
+          aria-label="Back to top"
+        >
+          <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+        </motion.button>
+      )}
+    </AnimatePresence>
   );
 }

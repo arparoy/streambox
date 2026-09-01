@@ -2,9 +2,8 @@
 
 import { useLocalStorage } from '@/hooks/use-local-storage';
 import { Movie } from '@/lib/types';
-import { Heart, Share2, Download, Copy, PlayCircle } from 'lucide-react';
+import { Heart, Share2, Copy } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 export default function MovieActions({ movie }: { movie: Movie }) {
   const [favorites, setFavorites] = useLocalStorage<string[]>('favorites', []);
@@ -14,9 +13,8 @@ export default function MovieActions({ movie }: { movie: Movie }) {
 
   useEffect(() => {
     setIsMounted(true);
-    // Add to recently viewed
     if (!recentlyViewed.includes(movie.id)) {
-      setRecentlyViewed(prev => [movie.id, ...prev].slice(0, 10)); // Keep last 10
+      setRecentlyViewed(prev => [movie.id, ...prev].slice(0, 10));
     }
   }, [movie.id, recentlyViewed, setRecentlyViewed]);
 
@@ -62,28 +60,28 @@ export default function MovieActions({ movie }: { movie: Movie }) {
         onClick={toggleFavorite}
         className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
           isFavorite && isMounted
-            ? 'bg-primary/10 border-primary text-primary' 
-            : 'border-border-subtle hover:bg-background text-foreground/80'
+            ? 'bg-primary/10 border-primary/30 text-primary' 
+            : 'border-border-subtle hover:border-primary/30 hover:bg-white/[0.03] text-foreground/60'
         }`}
       >
         <Heart className={`w-4 h-4 ${isFavorite && isMounted ? 'fill-primary' : ''}`} />
-        <span className="text-sm font-medium">{isFavorite && isMounted ? 'Saved to Favorites' : 'Add to Favorites'}</span>
+        <span className="text-sm font-medium font-[family-name:var(--font-display)]">{isFavorite && isMounted ? 'Saved' : 'Add to Favorites'}</span>
       </button>
 
       <button 
         onClick={shareMovie}
-        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:bg-background text-foreground/80 transition-colors"
+        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:border-primary/30 hover:bg-white/[0.03] text-foreground/60 transition-all"
       >
         <Share2 className="w-4 h-4" />
-        <span className="text-sm font-medium">Share</span>
+        <span className="text-sm font-medium font-[family-name:var(--font-display)]">Share</span>
       </button>
 
       <button 
         onClick={copyLink}
-        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:bg-background text-foreground/80 transition-colors"
+        className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-subtle hover:border-primary/30 hover:bg-white/[0.03] text-foreground/60 transition-all"
       >
         <Copy className="w-4 h-4" />
-        <span className="text-sm font-medium">{isCopied ? 'Copied!' : 'Copy Link'}</span>
+        <span className="text-sm font-medium font-[family-name:var(--font-display)]">{isCopied ? 'Copied!' : 'Copy Link'}</span>
       </button>
     </div>
   );

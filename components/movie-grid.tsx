@@ -24,12 +24,9 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
 
   const itemsPerPage = 12;
 
-  // Extract unique years and qualities
   const years = useMemo(() => Array.from(new Set(initialMovies.map(m => m.year))).sort((a, b) => b - a), [initialMovies]);
   const qualities = useMemo(() => Array.from(new Set(initialMovies.map(m => m.quality))).sort(), [initialMovies]);
 
-  // Reset to page 1 (home) when filters change, but skip the initial render
-  // so that direct navigation to /pages/N is respected.
   const isFirstRender = useRef(true);
   useEffect(() => {
     if (isFirstRender.current) {
@@ -67,7 +64,6 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
       filtered = filtered.filter(m => selectedQualities.includes(m.quality));
     }
 
-    // Sort by year newest first
     return filtered.sort((a, b) => b.year - a.year);
   }, [initialMovies, searchParam, selectedGenres, selectedYears, selectedQualities]);
 
@@ -94,9 +90,9 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
   const hasActiveFilters = selectedGenres.length > 0 || selectedYears.length > 0 || selectedQualities.length > 0;
 
   const FilterGroup = ({ title, items, selected, onToggle }: { title: string, items: (string | number)[], selected: any[], onToggle: (v: any) => void }) => (
-    <div className="space-y-2.5">
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground/50">{title}</h4>
-      <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+    <div className="space-y-3">
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground/30 font-[family-name:var(--font-mono)]">{title}</h4>
+      <div className="flex flex-col gap-2.5 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
         {items.map(item => {
           const isActive = selected.includes(item);
           return (
@@ -108,7 +104,7 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
               <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${isActive ? 'bg-primary border-primary' : 'border-border-subtle group-hover:border-primary/50'}`}>
                 {isActive && <Check className="w-3 h-3 text-white" />}
               </div>
-              <span className={`text-sm transition-colors ${isActive ? 'text-foreground font-medium' : 'text-foreground/60 group-hover:text-foreground'}`}>{item}</span>
+              <span className={`text-sm transition-colors ${isActive ? 'text-foreground font-medium' : 'text-foreground/40 group-hover:text-foreground/70'}`}>{item}</span>
             </label>
           );
         })}
@@ -122,24 +118,24 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
       <div className="md:hidden flex justify-between items-center mb-2">
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="flex items-center gap-2 bg-card border border-border-subtle px-4 py-2 rounded-lg text-sm text-foreground hover:bg-background transition-colors"
+          className="flex items-center gap-2 bg-card border border-border-subtle px-4 py-2 rounded-lg text-sm text-foreground hover:bg-card-hover transition-colors"
         >
           <SlidersHorizontal className="w-4 h-4" />
           <span>Filters</span>
-          {hasActiveFilters && <span className="w-1.5 h-1.5 rounded-full bg-primary" />}
+          {hasActiveFilters && <span className="w-1.5 h-1.5 rounded-full bg-primary" style={{ boxShadow: '0 0 6px var(--color-primary-glow)' }} />}
         </button>
 
         <div className="flex items-center gap-1 bg-card border border-border-subtle rounded-lg p-1">
           <button
             onClick={() => setViewMode('grid')}
-            className={`p-1.5 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground/40 hover:text-foreground'}`}
+            className={`p-1.5 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground/30 hover:text-foreground'}`}
             aria-label="Grid view"
           >
             <LayoutGrid className="w-4 h-4" />
           </button>
           <button
             onClick={() => setViewMode('list')}
-            className={`p-1.5 rounded-md transition-colors ${viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground/40 hover:text-foreground'}`}
+            className={`p-1.5 rounded-md transition-colors ${viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground/30 hover:text-foreground'}`}
             aria-label="List view"
           >
             <ListIcon className="w-4 h-4" />
@@ -150,22 +146,22 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
       {/* Sidebar Filters */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden backdrop-blur-sm"
+          className="fixed inset-0 bg-black/60 z-40 md:hidden backdrop-blur-sm"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
 
-      <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-sidebar p-6 overflow-y-auto md:relative md:w-60 md:z-0 md:bg-sidebar md:rounded-xl md:border md:border-border-subtle md:p-5 md:translate-x-0 md:self-start md:top-4 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+      <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-sidebar p-6 overflow-y-auto md:relative md:w-56 md:z-0 md:bg-sidebar md:rounded-xl md:border md:border-border-subtle md:p-5 md:translate-x-0 md:self-start md:top-4 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
         <div className="flex justify-between items-center mb-6 md:hidden">
-          <h2 className="text-lg font-bold">Filters</h2>
-          <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-foreground/60 hover:text-foreground">
+          <h2 className="text-lg font-bold font-[family-name:var(--font-display)]">Filters</h2>
+          <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-foreground/40 hover:text-foreground">
             <X className="w-5 h-5" />
           </button>
         </div>
 
         <div className="space-y-7">
           <div className="flex justify-between items-center">
-            <h3 className="font-semibold text-sm flex items-center gap-2">
+            <h3 className="font-semibold text-sm flex items-center gap-2 font-[family-name:var(--font-mono)] uppercase tracking-wider text-foreground/50">
               <Filter className="w-4 h-4 text-primary" /> Filters
             </h3>
             {hasActiveFilters && (
@@ -184,21 +180,21 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
       {/* Main Content */}
       <div className="flex-1 space-y-6">
         <div className="hidden md:flex justify-between items-center bg-card border border-border-subtle px-4 py-3 rounded-xl">
-          <div className="text-foreground/60 text-sm">
+          <div className="text-foreground/40 text-sm font-[family-name:var(--font-mono)]">
             Showing <span className="font-semibold text-foreground">{filteredMovies.length}</span> movies
           </div>
 
           <div className="flex items-center gap-1 bg-background border border-border-subtle rounded-lg p-1">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground/40 hover:text-foreground'}`}
+              className={`p-1.5 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground/30 hover:text-foreground'}`}
               aria-label="Grid view"
             >
               <LayoutGrid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-1.5 rounded-md transition-colors ${viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground/40 hover:text-foreground'}`}
+              className={`p-1.5 rounded-md transition-colors ${viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground/30 hover:text-foreground'}`}
               aria-label="List view"
             >
               <ListIcon className="w-4 h-4" />
@@ -207,7 +203,7 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
         </div>
 
         {searchParam && (
-          <div className="text-lg text-foreground">
+          <div className="text-lg text-foreground font-[family-name:var(--font-display)]">
             Search results for: <span className="font-bold text-primary">&quot;{searchParam}&quot;</span>
           </div>
         )}
@@ -223,9 +219,9 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
             {currentMovies.map((movie) => (
               <motion.div
                 layout
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 key={movie.id}
               >
                 <MovieCard movie={movie} viewMode={viewMode} />
@@ -234,20 +230,11 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
           </motion.div>
         ) : (
           <div className="flex flex-col items-center justify-center py-20 bg-card border border-border-subtle rounded-xl text-center px-4">
-            <div className="relative w-48 h-48 mb-6 opacity-80">
-              <Image
-                src="/no_results.jpg"
-                alt="No movies found"
-                fill
-                className="object-contain rounded-lg"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <p className="text-xl text-foreground/80 mb-2 font-semibold">No movies found</p>
-            <p className="text-foreground/50 mb-6 max-w-md">We couldn&apos;t find any movies matching your current criteria. Try adjusting your filters or search term.</p>
+            <p className="text-xl text-foreground/60 mb-2 font-semibold font-[family-name:var(--font-display)]">No movies found</p>
+            <p className="text-foreground/30 mb-6 max-w-md text-sm">We couldn&apos;t find any movies matching your current criteria. Try adjusting your filters or search term.</p>
             <button
               onClick={clearFilters}
-              className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover transition-colors font-medium text-sm"
+              className="fill-hover px-6 py-2 bg-primary text-white rounded-lg transition-colors font-medium text-sm"
             >
               Clear all filters
             </button>
@@ -258,14 +245,14 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
         {totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 pt-8 border-t border-border-subtle">
             {currentPage === 1 ? (
-              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-40 cursor-not-allowed text-foreground">
+              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-30 cursor-not-allowed text-foreground">
                 <ChevronLeft className="w-5 h-5" />
               </span>
             ) : (
               <Link
                 href={pageHref(currentPage - 1)}
                 aria-label="Previous page"
-                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background transition-colors text-foreground"
+                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-card-hover transition-colors text-foreground"
               >
                 <ChevronLeft className="w-5 h-5" />
               </Link>
@@ -286,11 +273,12 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
                     <Link
                       key={page}
                       href={pageHref(page)}
-                      className={`flex items-center justify-center w-9 h-9 rounded-lg text-sm font-medium transition-colors ${
+                      className={`flex items-center justify-center w-9 h-9 rounded-lg text-sm font-medium transition-all font-[family-name:var(--font-mono)] ${
                         currentPage === page
                           ? 'bg-primary text-white'
-                          : 'bg-card border border-border-subtle hover:bg-background text-foreground'
+                          : 'bg-card border border-border-subtle hover:bg-card-hover text-foreground/60'
                       }`}
+                      style={currentPage === page ? { boxShadow: '0 0 12px var(--color-primary-glow)' } : {}}
                     >
                       {page}
                     </Link>
@@ -300,14 +288,14 @@ export default function MovieGrid({ initialMovies, categories, currentPage = 1 }
             </div>
 
             {currentPage >= totalPages ? (
-              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-40 cursor-not-allowed text-foreground">
+              <span className="p-2 rounded-lg bg-card border border-border-subtle opacity-30 cursor-not-allowed text-foreground">
                 <ChevronRight className="w-5 h-5" />
               </span>
             ) : (
               <Link
                 href={pageHref(currentPage + 1)}
                 aria-label="Next page"
-                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-background transition-colors text-foreground"
+                className="p-2 rounded-lg bg-card border border-border-subtle hover:bg-card-hover transition-colors text-foreground"
               >
                 <ChevronRight className="w-5 h-5" />
               </Link>

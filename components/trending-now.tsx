@@ -9,11 +9,13 @@ export default function TrendingNow() {
 
   return (
     <div className="mb-16">
-      <div className="flex items-center gap-2 mb-6 border-b border-border-subtle pb-4">
+      <div className="flex items-center gap-3 mb-8">
         <Flame className="w-5 h-5 text-primary" />
-        <h2 className="text-xl font-bold tracking-tight text-foreground">
+        <h2 className="font-[family-name:var(--font-display)] font-extrabold tracking-tight text-foreground text-2xl"
+          style={{ letterSpacing: '-0.03em' }}>
           Trending <span className="text-primary">Now</span>
         </h2>
+        <div className="flex-1 h-px bg-border-subtle" />
       </div>
 
       {/* Horizontal scroll on mobile, grid on desktop */}
